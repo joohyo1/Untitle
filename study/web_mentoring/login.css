@@ -1,0 +1,81 @@
+html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+}
+
+.logo-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 18px;
+    margin-top: 9px;
+    font-family: 'Pretendard Variable';
+}
+
+
+
+#loginText {
+    color: #6F6F6F;
+    font-size: 30px;
+    margin: 0px 0px 60px 0px;
+}
+
+input {
+    background-color: #F5F5F5;
+    border: 0px;
+    width: 598px;
+    height: 52px;
+    font-size: 18px;
+    padding: 17px 22px;
+    font-family: 'Pretendard Variable';
+}
+
+
+
+#loginBtn {
+    background-color: #A6A6A6;
+    color: #FFFFFF;
+    border: 0px;
+    width: 598px;
+    height: 58px;
+    font-size: 18px;
+}
+
+.flex-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+
+}
+
+img {
+    width: 130px;
+    height: 130px;
+}
+
+.hidden {
+    display: none;
+}
