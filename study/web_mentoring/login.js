@@ -1,32 +1,26 @@
 // (이메일 조건: 최소 @, . 포함 / 비밀번호 조건: 8자 이상)
-const emailInput = document.querySelector('.emailInput');
-const passwordInput = document.querySelector(".passwordInput")
 const loginBtn = document.querySelector('button');
 const form = document.querySelector('form');
-const body = document.querySelector('body');
-
+const container = document.querySelector('.container');
 
 function checkUserId(event) {
-    const userId = emailInput.value;
-    const userPassword = passwordInput.value;
     event.preventDefault();
-    console.log(passwordCheck(userPassword), userPassword);
+    const userId = event.target[0].value;
+    const userPassword = event.target[1].value;
 
-    if (emailCheck(userId) == true && passwordCheck(userPassword) == true) {
-        loginSuccess(userId)
-    } else if (emailCheck(userId) == false) {
+    if (!emailCheck(userId)) {
         alert('올바른 이메일 형식을 입력해주세요');
+        return;
     }
-    else if (passwordCheck(userPassword) == false) {
+
+    if (!passwordCheck(userPassword)) {
         alert('비밀번호는 8자이상 입력해주세요');
+        return;
     }
-
-
+    loginSuccess(userId)
 }
-loginBtn.addEventListener('click', checkUserId)
 
-
-
+form.addEventListener('submit', checkUserId)
 
 function emailCheck(email) {
     if (email.includes("@") && email.includes(".")) return true;
@@ -41,6 +35,6 @@ function passwordCheck(password) {
 function loginSuccess(userId) {
     form.classList.add('hidden')
     const loginSuccess = document.createElement('h2');
-    body.appendChild(loginSuccess);
+    container.appendChild(loginSuccess);
     loginSuccess.innerText = `${userId}님로그인에 성공하셨습니다!`
 }
