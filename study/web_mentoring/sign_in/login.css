@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     width: 100%;
@@ -47,6 +51,7 @@ input {
     font-size: 18px;
     padding: 17px 22px;
     font-family: 'Pretendard Variable';
+    color: #BBBBBB;
 }
 
 #loginBtn {
@@ -56,6 +61,7 @@ input {
     height: 58px;
     font-size: 18px;
     padding: 17px 22px;
+    margin: 0px 0px 11px 0px
 }
 
 .flex-item {
@@ -78,4 +84,10 @@ img {
 
 .hidden {
     display: none;
+}
+
+a {
+    font-size: 11px;
+    color: #6F6F6F;
+    text-decoration: none;
 }
